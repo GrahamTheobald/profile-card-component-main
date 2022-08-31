@@ -1,0 +1,115 @@
+:root {
+
+--Dark-cyan: hsl(185, 75%, 39%);
+--Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+--Dark-grayish-blue: hsl(227, 10%, 46%);
+--Dark-gray: hsl(0, 0%, 59%);
+--light-gray: hsl(0, 0%, 79%);
+--white: hsl(0, 0%, 100%);
+
+--font-large: 18px;
+--container-width: 350px;
+
+--profile-pic-size: 96px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+
+    background-color: var(--Dark-cyan);
+    background-image: 
+        url("./images/bg-pattern-top.svg"),
+        url("./images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: -50vw -100vh, 50vw 50vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: var(--container-width);
+    height: calc(var(--container-width) *1.2);
+
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+.pattern {
+    flex: 100;
+    width: inherit;
+    background-image: url("./images/bg-pattern-card.svg");
+    border-radius: 1rem 1rem 0 0;
+}
+
+.main {
+    position: relative;
+    flex: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.profile-pic {
+    position: absolute;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.main-bottom {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    margin-top: calc(var(--profile-pic-size) / 2 + 1.5rem);
+}
+
+.location {
+    color: var(--Dark-gray)
+}
+
+.age {
+    color: var(--Dark-gray)
+}
+
+.stats{
+    flex: 50;
+    width: inherit;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+.stat {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat > p {
+    font-size: 12px;
+    letter-spacing: 2px;
+
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.age {
+    font-weight: 400;
+}
+
+.stat > p {
+    color: var(--Dark-gray);
+}
